@@ -1,10 +1,11 @@
+import CardWidget from "../cardWidget/CardWidget";
 export default function Navbar(){
-
     const navStyle= {
         display: "flex",
         textalign: "right",
         justifyContent:"flex-end",
         marginRight:"150px",
+        marginTop:"-55px",
     }
     const liStyle ={
             display:"flex",
@@ -24,7 +25,7 @@ export default function Navbar(){
     return (
         <header className="header">
                 <div className="logo">
-                    logo
+                <CardWidget/>
                 </div>  
         <div className="nav"style={navStyle} >
             <ul className="links" style={liStyle} >
@@ -33,6 +34,7 @@ export default function Navbar(){
                 <li>Contacto</li>  
             </ul>
         </div>
+        
     </header>
     );
 }
