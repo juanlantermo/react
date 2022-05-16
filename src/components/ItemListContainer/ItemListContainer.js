@@ -1,3 +1,4 @@
+import {products} from "../data/productos";
 import ItemList from "../ItemList/ItemList";
 export default function ItemListContainer(){
     const task = new Promise ((resolve, reject) => {
@@ -13,7 +14,7 @@ export default function ItemListContainer(){
       })
     return(
         <div>
-        <ItemList/> 
+        <ItemList ListaProductos= {products}/> 
       </div>
     )
 }

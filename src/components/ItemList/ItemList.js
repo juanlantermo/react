@@ -1,6 +1,6 @@
 import Item from "./Item/Item";
-import {products} from "../data/productos";
-export default function ItemList({product}){
+
+export default function ItemList({products}){
     return(
         <div className="ItemList">
         {products.map((product) => (
