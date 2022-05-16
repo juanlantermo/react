@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Navbarfun category1={"Contacto"} category2={"Nosotros"} category3={"Productos"}/>
       <h1>Primer desafío React</h1>
-      <ItemListContainer greeting1={"Aquí van a estar los productos"} greeting2={"Acá también"}/>
+      <ItemListContainer/>
       <Container>
       <ItemCount/>
       </Container>

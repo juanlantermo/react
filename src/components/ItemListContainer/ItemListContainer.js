@@ -1,8 +1,19 @@
-export default function ItemListContainer({greeting1,greeting2}){
+import ItemList from "../ItemList/ItemList";
+export default function ItemListContainer(){
+    const task = new Promise ((resolve, reject) => {
+        setTimeout(() => {
+         resolve(ItemList);
+        }, 2000)
+        
+      })
+      task.then((result) => {
+        console.log(result)
+      }, err => {
+        console.log(err)
+      })
     return(
         <div>
-            <h2>{greeting1}</h2>
-            <h2>{greeting2}</h2>
-        </div>
+        <ItemList/> 
+      </div>
     )
 }
