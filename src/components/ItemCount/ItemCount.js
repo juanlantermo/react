@@ -5,7 +5,7 @@ const ItemCount = ({stock}) => {
 
     const sumar = () => {
         if(counter < stock){
-          setCounter(counter +1)
+            setCounter(counter +1)
         }
     }
 
@@ -15,13 +15,13 @@ const ItemCount = ({stock}) => {
         }
     }
 
-  return (
+    return (
     <div>
-        <button onClick={sumar}>+</button>
+        <button onClick={sumar} className="addCarrito">+</button>
         <span>{counter}</span>
-        <button onClick={restar}>-</button>
+        <button onClick={restar} className="addCarrito">-</button>
     </div>
-  )
+    )
 }
 
 export default ItemCount
