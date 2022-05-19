@@ -33,3 +33,6 @@ h2{
 img {
     max-width: 100% !important;
   }
+.btn-primary{
+    margin-top: 10px;
+}

@@ -1,19 +1,27 @@
-import  React  from "react"
-export default function ItemCount(){
-    const [text]= React.useState("Agregar al carrito")
-    const [count,setCount]=React.useState(0)
+import React, {useState} from 'react'
 
-    const handleRest=()=>{
-        if(count > 0) {
-        setCount( count - 1)
+const ItemCount = ({stock}) => {
+    const [counter, setCounter] = useState(1)
+
+    const sumar = () => {
+        if(counter < stock){
+          setCounter(counter +1)
         }
-     }
-    return(
-        <div>
-        {text}
-        <input className="addCarrito" type="button" value="+" onClick={() => setCount(count + 1)} />
-         {count}
-        <input className="addCarrito" type="button" value="-" onClick={handleRest} />
-        </div>
-    ); 
+    }
+
+    const restar = () => {
+        if(counter > 0){
+            setCounter(counter -1)
+        }
+    }
+
+  return (
+    <div>
+        <button onClick={sumar}>+</button>
+        <span>{counter}</span>
+        <button onClick={restar}>-</button>
+    </div>
+  )
 }
+
+export default ItemCount
