@@ -1,13 +1,15 @@
+import React from 'react';
 import {Card, Button} from 'react-bootstrap';
-export default function Item ({product}) {
+
+export default function Item ({producto}) {
   return (
     <Card style={{ width: "18rem", border: "1px solid #ccc" }}>
-      <Card.Img variant="top" src={product.image} className="img-fluid" />
+      <Card.Img variant="top" src={producto.image} className="img-fluid" />
       <Card.Body>
-        <Card.Title>{product.title}</Card.Title>
+        <Card.Title>{producto.title}</Card.Title>
         <Card.Text>
-          <p>Stock: {product.stock}</p>
-          <p>Price : {product.price}</p>
+          <p>Stock: {producto.stock}</p>
+          <p>Price : {producto.price}</p>
         </Card.Text>
         <Button variant="primary">Ver mas</Button>
       </Card.Body>

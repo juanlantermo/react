@@ -1,20 +1,28 @@
-import {products} from "../data/productos";
+import { useState } from "react";
+import { useEffect } from "react";
+import {productos} from "../data/productos"
 import ItemList from "../ItemList/ItemList";
 export default function ItemListContainer(){
+
+    // eslint-disable-next-line no-undef
+    const [listaProductos, setListaProductos] = useState([])
+
+
     const task = new Promise ((resolve, reject) => {
         setTimeout(() => {
-         resolve(ItemList);
+         resolve(productos);
         }, 2000)
-        
       })
-      task.then((result) => {
-        console.log(result)
-      }, err => {
-        console.log(err)
-      })
+      useEffect(()=>{
+        task
+        .then((res)=>setListaProductos(res))
+        .catch((err)=>console.log(err))
+        // eslint-disable-next-line
+    },[])
     return(
         <div>
-        <ItemList ListaProductos= {products}/> 
+        <ItemList ListaProductos= {listaProductos}/> 
       </div>
     )
+   
 }
