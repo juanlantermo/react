@@ -1,5 +1,5 @@
 
-export const productos = [
+export const products = [
     {
       id: 1, 
       title: "Teclado Keychron K8",

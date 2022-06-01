@@ -1,17 +1,24 @@
-import Navbarfun from "./components/Navbar/Navbar";
-import ItemCount from "./components/ItemCount/ItemCount";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import { Container } from "react-bootstrap";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+
+import Home from "./views/Home/Home"
+import Cart from "./views/Cart/Cart"
+import Products from "./views/Products/Products"
+import Category from "./views/Category/Category"
+import Product from "./views/Product/Product"
+
+
 function App() {
   return (
-    <div className="App">
-      <Navbarfun category1={"Contacto"} category2={"Nosotros"} category3={"Productos"}/>
-      <h1>Primer desafío React</h1>
-      <ItemListContainer/>
-      <Container>
-      <ItemCount/>
-      </Container>
-    </div>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="*" element={<Home />} />
+          <Route exact path="/products" element={<Products />} />
+          <Route exact path="/product/:productId" element={<Product />} />
+          <Route exact path="/category/:categoryId" element={<Category />} />
+          <Route exact path="/cart" element={<Cart />} />
+        </Routes>
+      </BrowserRouter>
   );
 }
+
 export default App;

@@ -1,28 +1,31 @@
-h1{
-    color: blue;
+*{ padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    }
+
+#Logo svg{
+    height: 50px !important;
+    color: rgb(107, 124, 180) !important;
 }
-h2{
-    display: inline;
-    margin: 20px;
-    color: black;
-}
-.logo{
-    width: 20%;
-}
-/* #nav{
-    display: "flex"!important;
-    text-align: "right" !important;
-    justify-content:"flex-end";
-    margin-Right:"150px";
-    margin:"-55px";
-} */
-.navbar-expand-lg{
-    display: flex;
-    justify-content: flex-end !important;
-    margin-left: 850px;
-    margin-top: -45px;
+#basic-navbar-nav{
     padding: 20px;
 }
+#basic-navbar-nav a{
+    padding: 5px;
+    text-decoration: none;
+    color: rgba(71, 69, 69, 0.445);
+    height: 5px;
+}
+#basic-navbar-nav a:hover{
+    color: black;
+}
+#Carrito svg{
+    margin-top: 10px;
+    height: 45px;
+    color: rgb(68, 43, 209);
+}
+
 .addCarrito{
     margin: 2px;
     background-color: rgb(135, 195, 245);
@@ -35,4 +38,14 @@ img {
   }
 .btn-primary{
     margin-top: 10px;
-}
+}    
+.add-button{
+    outline: none;
+    padding: 10px 20px;
+    border: none;
+    }
+.stock-button{
+    background-color: #00a8ff}
+.add-button-count{
+    padding: 0px 25px}
+    

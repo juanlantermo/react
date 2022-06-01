@@ -1,21 +1,19 @@
-import React from 'react';
-import {Card, Button} from 'react-bootstrap';
-import ItemCount from '../ItemCount/ItemCount';
-
-
-export default function Item ({producto}) {
+import {useNavigate} from "react-router-dom"
+import { Card} from "react-bootstrap";
+import AddButton from "../AddButton/AddButton";
+export default function Item({ item }) {
+  const navigate = useNavigate()
   return (
-    <Card style={{ width: "18rem", border: "1px solid #ccc" }}>
-      <Card.Img variant="top" src={producto.image} className="img-fluid" />
-      <Card.Body>
-        <Card.Title>{producto.title}</Card.Title>
-        <Card.Text>
-          <p>Stock: {producto.stock}</p>
-          <p>Price : {producto.price}</p>
-        </Card.Text>
-        <ItemCount stock={producto.stock}/>
-        <Button variant="primary" className='verMas'>Ver mas</Button>
-      </Card.Body>
-    </Card>
+      <Card style={{ width: "18rem",padding:"20px",marginLeft:"60px" }} onClick={() => navigate(`/product/${item.id}`)}>
+        <Card.Img variant="top" src={item.image} />
+        <Card.Body>
+          <Card.Title>{item.title}</Card.Title>
+          <Card.Text>
+           Descripcion del producto
+          </Card.Text>
+          <h3>$ {item.price}</h3>
+          <AddButton />
+        </Card.Body>
+      </Card>
   );
 }
